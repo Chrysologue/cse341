@@ -3,7 +3,7 @@ const { ObjectId } = require("mongodb");
 
 const contactCont = {};
 
-contactCont.getAllUsers = async (req, res) => {
+contactCont.getAllContacts = async (req, res) => {
   try {
     const db = await connectToDB("contacts_db");
     const contacts = db.collection("contacts");
@@ -18,7 +18,7 @@ contactCont.getAllUsers = async (req, res) => {
   }
 };
 
-contactCont.getUserById = async function (req, res) {
+contactCont.getContactById = async function (req, res) {
   try {
     const db = await connectToDB("contacts_db");
     const contacts = db.collection("contacts");
